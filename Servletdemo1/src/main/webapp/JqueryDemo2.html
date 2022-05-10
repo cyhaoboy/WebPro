@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>群魔共舞</title>
+    <style type="text/css">
+        body{
+            background-color: #000000;
+        }
+        .wrap{
+            margin: 100px auto;
+            padding: 0;
+            width: 705px;
+            height: 455px;
+            background-color: #000;
+            border: 1px solid white;
+        }
+        .wrap li {
+            margin: 0;
+            list-style: none;
+            float: left;
+            margin: 5px 5px 5px 5px;
+            padding: 0;
+        }
+        .wrap img{
+            margin: 0;
+            display: block;
+        }
+    </style>
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        // 给小人物所在的li标签设置鼠标移入事件：把当前的li标签透明度设置为1，其他兄弟li标签透明度设置为0.2
+        // 鼠标离开大盒子 把所有的li标签的透明度设置为1
+
+        // 获取小人物所在的li
+        // $('.wrap li').find('li');
+
+        $('.wrap li').mouseenter(function(){
+            //css方法有返回值，返回值就是设置的这个方法的元素本身
+            $(this).css('opacity',1).siblings('li').css('opacity',0.2);
+        });
+        $('.wrap').mouseleave(function(){
+            $(this).find('li').css('opacity' , 1);
+        });
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <ul>
+        <li><a href="#"><img src="images/01.png" alt=""></a></li>
+        <li><a href="#"><img src="images/01.png" alt=""></a></li>
+        <li><a href="#"><img src="images/01.png" alt=""></a></li>
+        <li><a href="#"><img src="images/01.png" alt=""></a></li>
+        <li><a href="#"><img src="images/01.png" alt=""></a></li>
+        <li><a href="#"><img src="images/01.png" alt=""></a></li>
+    </ul>
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+$(function (){
+        var stu={name:"zhangsan","age":19,gender:true};
+        var stus1=[{name:"zhangsan","age":19,gender:true},{name:"lisi",age:20,'gender':false},{name:"wangwu","age":18,gender:true}];
+        var stus2={"stus":[{name:"zhangsan","age":19,gender:true},{name:"lisi",age:20,'gender':false},{name:"wangwu","age":18,gender:true}]};
+
+
+        var line="<tr><td>"+stu.name+"</td><td>"+stu.age+"</td><td>"+stu.gender +"</td></tr>"
+        $("#table").append(line);
+
+
+        for (var i = 0; i < stus1.length; i++) {
+                var line="<tr><td>"+i+"</td><td>"+stus1[i].name+"</td><td>"+stus1[i].age+"</td><td>"+stus1[i].gender +"</td></tr>"
+                $("#first").append(line);
+
+        }
+    for (var i = 0; i < stus2.stus.length; i++) {
+    var line="<tr><td>"+stus2.stus[i].name+"</td><td>"+stus2.stus[i].age+"</td><td>"+stus2.stus[i].gender +"</td></tr>"
+    $("#second").append(line);
+
+     }}
+)
+    </script>
+
+</head>
+<body>
+<form action=""  >
+    <table id="table" border="2">
+        <tr>
+            <td>name</td>
+            <td>age</td>
+            <td>gender</td>
+        </tr>
+    </table>
+
+    <table id="first" border="2">
+        <tr>
+            <td>序号</td>
+            <td>name</td>
+            <td>age</td>
+            <td>gender</td>
+        </tr>
+    </table>
+
+    <table id="second" border="2">
+        <tr>
+            <td>name</td>
+            <td>age</td>
+            <td>gender</td>
+        </tr>
+    </table>
+
+</form>
+</body>
+</html>

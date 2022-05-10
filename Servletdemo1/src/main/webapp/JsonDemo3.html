@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      $(function () {
+              var pageBean = {
+                  "totalCount": 80, "totalPage": 5, "currentPage": 2,
+                  "list": [{
+                      "id": 1111,
+                      "username": "zhangsan",
+                      "pwd": "99999",
+                      "uemail": "qww@126.com",
+                      "gender": "男",
+                      "tel": "18932579658",
+                      "intro": "I am a student"
+                  }, {
+                      "id": 2222,
+                      "username": "lisi",
+                      "pwd": "6666",
+                      "uemail": "kkk@126.com",
+                      "gender": "女",
+                      "tel": "13393208975",
+                      "intro": "you are a student"
+                  }]
+              };
+
+
+              for (var i=0;i<pageBean.list.length;i++) {
+                var line="<tr><td>"+pageBean.list[i].id+"</td><td>"+pageBean.list[i].username+"</td><td>"+pageBean.list[i].pwd+"</td><td>"+pageBean.list[i].uemail +"</td><td>"+pageBean.list[i].gender +"</td><td>"+pageBean.list[i].tel +"</td><td>"+pageBean.list[i].intro +"</td></tr>"
+                  $("#second").append(line);
+              }
+
+              var page="<td><td>"+pageBean.totalCount+"</td><td>"+pageBean.totalPage+"</td><td>"+pageBean.currentPage+"</td></tr>>"
+              $("#page").append(page)
+
+
+          }
+       )
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+<form action="">
+    <table id="second" border="2">
+        <tr>
+            <td>id</td>
+            <td>用户名</td>
+            <td>密码</td>
+            <td>邮箱</td>
+            <td>性别</td>
+            <td>电话</td>
+            <td>个人介绍</td>
+        </tr>
+
+    </table>
+<table id="page">
+
+</table>
+
+</form>
+</body>
+</html>

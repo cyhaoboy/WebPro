@@ -1,0 +1,4 @@
+# Project exclude paths
+/Servletdemo1/target/
+/Servletdemo2/target/
+/target/
